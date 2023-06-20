@@ -24,7 +24,13 @@ const countries = ref([]);
 <template>
   App limpia
   <br>
-  {{ countries }}
-  <br>
   {{ urlApi }}
+  <br><br>
+  <h2>Mostramos uno solo</h2>
+  <br>
+  {{ countries[0].name.official }}
+  <br> <br>
+  <h2>Usamos un bucle for para mostrar todo el array. Usaremos un div pero podemos usar otras etiquetas.</h2>
+  <br>
+  <div v-for="country in countries">{{ country.name.official }}</div>
 </template>
